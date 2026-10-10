@@ -1,0 +1,285 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-ink-4: var(--ink-4);
+  --color-lime: var(--lime);
+  --color-lime-strong: var(--lime-strong);
+  --color-lime-soft: var(--lime-soft);
+  --color-lime-wash: var(--lime-wash);
+  --color-olive: var(--olive);
+  --color-indigo-crm: var(--indigo-crm);
+  --color-pos: var(--pos);
+  --color-pos-bg: var(--pos-bg);
+  --color-neg: var(--neg);
+  --color-neg-bg: var(--neg-bg);
+  --color-amber-crm: var(--amber-crm);
+  --color-amber-bg: var(--amber-bg);
+  --color-orange-crm: var(--orange-crm);
+  --color-mint-crm: var(--mint-crm);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+:root {
+  color-scheme: light;
+
+  /* ── Mittal CRM Design Palette ── */
+  --canvas:      #EEF1EA;
+  --surface:     #FFFFFF;
+  --surface-2:   #F7F8F4;
+  --surface-3:   #EFF1EA;
+  --line:        #E4E7DF;
+  --ink:         #121410;
+  --ink-2:       #3A3D36;
+  --ink-3:       #6E7268;
+  --ink-4:       #9A9E93;
+  --lime:        #D5F65A;
+  --lime-strong: #B9E52F;
+  --lime-soft:   #EEFAC4;
+  --lime-wash:   #F7FCE3;
+  --olive:       #8FA336;
+  --indigo-crm:  #2E3B8F;
+  --pos:         #1F8A3B;
+  --pos-bg:      #E3F6D5;
+  --neg:         #C23B22;
+  --neg-bg:      #FCE6E1;
+  --amber-crm:   #D99A0B;
+  --amber-bg:    #FFF3CF;
+  --orange-crm:  #F28A1F;
+  --mint-crm:    #5ED6B0;
+
+  /* ── shadcn / Tailwind mapping ── */
+  --background:            var(--canvas);
+  --foreground:            var(--ink);
+  --card:                  var(--surface);
+  --card-foreground:       var(--ink);
+  --popover:               var(--surface);
+  --popover-foreground:    var(--ink);
+  --primary:               var(--lime);
+  --primary-foreground:    var(--ink);
+  --secondary:             var(--surface-2);
+  --secondary-foreground:  var(--ink-2);
+  --muted:                 var(--surface-2);
+  --muted-foreground:      var(--ink-3);
+  --accent:                var(--surface-3);
+  --accent-foreground:     var(--ink);
+  --destructive:           var(--neg);
+  --border:                var(--line);
+  --input:                 var(--surface-2);
+  --ring:                  var(--ink);
+  --radius:                0.875rem;
+
+  --chart-1: var(--lime);
+  --chart-2: var(--olive);
+  --chart-3: var(--indigo-crm);
+  --chart-4: var(--orange-crm);
+  --chart-5: var(--mint-crm);
+
+  --sidebar:                    var(--surface);
+  --sidebar-foreground:         var(--ink);
+  --sidebar-primary:            var(--ink);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent:             var(--surface-3);
+  --sidebar-accent-foreground:  var(--ink);
+  --sidebar-border:             var(--line);
+  --sidebar-ring:               var(--ink);
+
+  --shadow-card:   0 12px 32px -16px rgba(18, 20, 16, 0.10);
+  --shadow-lifted: 0 24px 48px -16px rgba(18, 20, 16, 0.24);
+}
+
+/* Dark mode stub — not in V1 */
+.dark {
+  color-scheme: dark;
+  --canvas:      #1A1D18;
+  --surface:     #222520;
+  --surface-2:   #2A2D26;
+  --surface-3:   #30332C;
+  --line:        rgba(255,255,255,0.1);
+  --ink:         #E8EBE2;
+  --ink-2:       #C8CBB8;
+  --ink-3:       #8A8D7A;
+  --ink-4:       #5A5D50;
+  --background:            var(--canvas);
+  --foreground:            var(--ink);
+  --card:                  var(--surface);
+  --card-foreground:       var(--ink);
+  --popover:               var(--surface);
+  --popover-foreground:    var(--ink);
+  --primary:               var(--lime);
+  --primary-foreground:    #121410;
+  --secondary:             var(--surface-2);
+  --secondary-foreground:  var(--ink-2);
+  --muted:                 var(--surface-2);
+  --muted-foreground:      var(--ink-3);
+  --accent:                var(--surface-3);
+  --accent-foreground:     var(--ink);
+  --destructive:           #E54B2A;
+  --border:                var(--line);
+  --input:                 rgba(255,255,255,0.08);
+  --ring:                  var(--lime);
+  --sidebar:               #1E2119;
+  --sidebar-foreground:    var(--ink);
+  --sidebar-primary:       var(--ink);
+  --sidebar-primary-foreground: #121410;
+  --sidebar-accent:        var(--surface-3);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border:        rgba(255,255,255,0.08);
+  --sidebar-ring:          var(--lime);
+}
+
+@layer base {
+  *, *::before, *::after {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px var(--lime-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-greeting {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+  }
+
+  .text-hero-num {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-kpi-num {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-eyebrow {
+    font-size: 0.6875rem;
+    line-height: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .hero-paise {
+    font-size: 0.55em;
+    color: var(--ink-3);
+    font-weight: 500;
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-lifted {
+    box-shadow: var(--shadow-lifted);
+  }
+
+  .hatch-lime {
+    background-image: repeating-linear-gradient(
+      45deg, var(--lime) 0px, var(--lime) 3px, transparent 3px, transparent 6px
+    );
+  }
+  .hatch-grey {
+    background-image: repeating-linear-gradient(
+      45deg, var(--ink-4) 0px, var(--ink-4) 3px, transparent 3px, transparent 6px
+    );
+  }
+  .hatch-amber {
+    background-image: repeating-linear-gradient(
+      45deg, var(--amber-crm) 0px, var(--amber-crm) 3px, transparent 3px, transparent 6px
+    );
+  }
+  .hatch-orange {
+    background-image: repeating-linear-gradient(
+      45deg, var(--orange-crm) 0px, var(--orange-crm) 3px, transparent 3px, transparent 6px
+    );
+  }
+  .hatch-mint {
+    background-image: repeating-linear-gradient(
+      45deg, var(--mint-crm) 0px, var(--mint-crm) 3px, transparent 3px, transparent 6px
+    );
+  }
+}
