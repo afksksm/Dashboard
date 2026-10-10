@@ -22,6 +22,9 @@ const contentSecurityPolicy = [
 ].join('; ')
 
 const nextConfig = {
+  turbopack: {
+    root: '..',
+  },
   images: {
     unoptimized: true,
   },
