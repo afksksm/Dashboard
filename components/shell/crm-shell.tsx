@@ -20,6 +20,13 @@ export function CrmShell({
 }) {
   return (
     <div className="relative min-h-dvh overflow-x-clip bg-[var(--canvas)]">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-[var(--ink)] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      >
+        Skip to main content
+      </a>
+
       {/* Canvas lime wash (top-right subtle lime glow) */}
       <div
         aria-hidden="true"
@@ -101,7 +108,7 @@ export function CrmShell({
         </div>
 
         {/* Page content */}
-        <main className="px-4 py-4 md:px-6 md:py-6 lg:px-6 lg:py-4 relative z-10">
+        <main id="main-content" className="px-4 py-4 md:px-6 md:py-6 lg:px-6 lg:py-4 relative z-10">
           {children}
         </main>
       </div>
