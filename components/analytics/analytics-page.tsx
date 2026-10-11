@@ -72,14 +72,14 @@ export function AnalyticsPage() {
           <button
             type="button"
             onClick={() => window.print()}
-            className="flex h-10 items-center gap-2 rounded-full border border-[var(--line)] bg-white px-4 text-xs font-semibold text-[var(--ink)] hover:bg-[var(--surface-2)] transition-colors shadow-xs"
+            className="flex h-10 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-1)] px-4 text-xs font-semibold text-[var(--ink)] hover:bg-[var(--surface-2)] transition-colors shadow-xs"
           >
             <DownloadIcon className="size-3.5" />
             <span>Export PDF Report</span>
           </button>
           <button
             type="button"
-            className="flex h-10 items-center gap-2 rounded-full border border-[var(--line)] bg-white px-4 text-xs font-semibold text-[var(--ink)] hover:bg-[var(--surface-2)] transition-colors shadow-xs"
+            className="flex h-10 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-1)] px-4 text-xs font-semibold text-[var(--ink)] hover:bg-[var(--surface-2)] transition-colors shadow-xs"
           >
             <FileSpreadsheetIcon className="size-3.5" />
             <span>Export Excel</span>
@@ -88,7 +88,7 @@ export function AnalyticsPage() {
       </div>
 
       {/* Control Strip: Range Selector & Compare Switch */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-[20px] bg-white p-4 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-[20px] bg-[var(--surface-1)] p-4 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
         {/* Navigation Tabs */}
         <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
           {(
@@ -146,7 +146,7 @@ export function AnalyticsPage() {
       {activeTab === 'overview' && (
         <div className="flex flex-col gap-6">
           {/* Hero Area Chart */}
-          <div className="rounded-[28px] bg-white p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
+          <div className="rounded-[28px] bg-[var(--surface-1)] p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
             <div className="flex items-center justify-between pb-4 border-b border-[var(--surface-2)]">
               <div>
                 <h3 className="text-lg font-bold text-[var(--ink)]">Taxable Revenue Trajectory</h3>
@@ -190,7 +190,7 @@ export function AnalyticsPage() {
           </div>
 
           {/* Breakdown by Category Table */}
-          <div className="rounded-[24px] bg-white border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)] overflow-hidden">
+          <div className="rounded-[24px] bg-[var(--surface-1)] border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)] overflow-hidden">
             <div className="p-5 border-b border-[var(--line)]">
               <h3 className="text-sm font-bold text-[var(--ink)]">Category Sales Contribution</h3>
               <p className="text-xs text-[var(--ink-3)]">Product volume and growth breakdown</p>
@@ -226,7 +226,7 @@ export function AnalyticsPage() {
       {/* ── Tab Content: Products ─────────────────────────────────── */}
       {activeTab === 'products' && (
         <div className="flex flex-col gap-6">
-          <div className="rounded-[28px] bg-white p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
+          <div className="rounded-[28px] bg-[var(--surface-1)] p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
             <h3 className="text-lg font-bold text-[var(--ink)] mb-1">Top Selling Items by Revenue</h3>
             <p className="text-xs text-[var(--ink-3)] mb-6">Unit shipments and pre-tax turnover</p>
 
@@ -262,7 +262,7 @@ export function AnalyticsPage() {
       {activeTab === 'salespeople' && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {salespeople.map((sp) => (
-            <div key={sp.id} className="rounded-[28px] bg-white p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)] flex flex-col justify-between">
+            <div key={sp.id} className="rounded-[28px] bg-[var(--surface-1)] p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)] flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3">
                   <div className="flex size-12 items-center justify-center rounded-2xl bg-[var(--lime-soft)] text-sm font-bold text-[var(--ink)]">
@@ -304,7 +304,7 @@ export function AnalyticsPage() {
       {/* ── Tab Content: Payments ─────────────────────────────────── */}
       {activeTab === 'payments' && (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div className="lg:col-span-6 rounded-[28px] bg-white p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
+          <div className="lg:col-span-6 rounded-[28px] bg-[var(--surface-1)] p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
             <h3 className="text-base font-bold text-[var(--ink)] mb-4">Payment Method Distribution</h3>
             <div className="h-64 w-full">
               <ResponsiveContainer width="100%" height="100%">
@@ -328,13 +328,13 @@ export function AnalyticsPage() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 rounded-[28px] bg-white p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)] flex flex-col justify-between">
+          <div className="lg:col-span-6 rounded-[28px] bg-[var(--surface-1)] p-6 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)] flex flex-col justify-between">
             <div>
               <h3 className="text-base font-bold text-[var(--ink)] mb-4">Tender Totals</h3>
               <div className="divide-y divide-[var(--surface-2)]">
                 {paymentPieData.map((item, idx) => (
                   <div key={item.name} className="flex items-center justify-between py-3">
-                    <div className="flex items-center gap-2.5">
+<div className="flex flex-wrap items-center gap-2.5">
                       <div className="size-3 rounded-full" style={{ backgroundColor: pieColors[idx % pieColors.length] }} />
                       <span className="text-xs font-bold text-[var(--ink)]">{item.name}</span>
                     </div>

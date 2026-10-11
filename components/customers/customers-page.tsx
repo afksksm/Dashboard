@@ -69,7 +69,7 @@ export function CustomersPage() {
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-[20px] bg-white p-4 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-[20px] bg-[var(--surface-1)] p-4 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
         <div className="relative flex-1 max-w-md">
           <SearchIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-[var(--ink-4)]" />
           <input

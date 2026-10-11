@@ -154,7 +154,7 @@ export function ProductsPage() {
       </div>
 
       {/* Filter and Category Bar */}
-      <div className="flex flex-col gap-3 rounded-[20px] bg-white p-4 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
+      <div className="flex flex-col gap-3 rounded-[20px] bg-[var(--surface-1)] p-4 border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)]">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="relative flex-1 max-w-md">
             <SearchIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-[var(--ink-4)]" />
@@ -198,7 +198,7 @@ export function ProductsPage() {
       </div>
 
       {/* Catalog Table */}
-      <div className="rounded-[20px] bg-white border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)] overflow-hidden">
+      <div className="rounded-[20px] bg-[var(--surface-1)] border border-[var(--line)] shadow-[0_12px_32px_-16px_rgba(18,20,16,0.10)] overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs border-collapse">
             <thead>
@@ -219,7 +219,7 @@ export function ProductsPage() {
                   key={p.id}
                   className={cn(
                     'h-14 hover:bg-[var(--surface-2)] transition-colors',
-                    !p.active && 'opacity-50 bg-neutral-50'
+                    !p.active && 'opacity-50 bg-[var(--surface-2)]'
                   )}
                 >
                   <td className="py-3 px-4 font-bold text-[var(--ink)]">
@@ -262,7 +262,7 @@ export function ProductsPage() {
                     >
                       <span
                         className={cn(
-                          'pointer-events-none inline-block size-4 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out',
+                          'pointer-events-none inline-block size-4 transform rounded-full bg-[var(--surface-1)] shadow-lg ring-0 transition duration-200 ease-in-out',
                           p.active ? 'translate-x-4' : 'translate-x-0'
                         )}
                       />
@@ -279,7 +279,7 @@ export function ProductsPage() {
       {drawerOpen && (
         <div className="fixed inset-0 z-50 overflow-hidden bg-black/40 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-            <div className="w-screen max-w-md bg-white rounded-l-[28px] p-6 sm:p-8 shadow-2xl flex flex-col justify-between overflow-y-auto">
+            <div className="w-screen max-w-md bg-[var(--surface-1)] rounded-l-[28px] p-6 sm:p-8 shadow-2xl flex flex-col justify-between overflow-y-auto">
               <form onSubmit={handleSaveProduct} className="flex flex-col gap-5">
                 {/* Drawer header */}
                 <div className="flex items-center justify-between pb-4 border-b border-[var(--line)]">

@@ -62,7 +62,7 @@ export function CrmTopbar({
   return (
     <div className="sticky top-4 z-20 mx-4 md:mx-6">
       <div
-        className="flex h-16 items-center justify-between gap-4 rounded-full bg-white/95 backdrop-blur-md px-4 md:px-5 border border-[var(--line)]"
+        className="flex h-16 items-center justify-between gap-4 rounded-full bg-[var(--surface-1)]/95 backdrop-blur-md px-4 md:px-5 border border-[var(--line)]"
         style={{ boxShadow: '0 12px 32px -16px rgba(18,20,16,0.10)' }}
       >
         {/* Left: breadcrumb */}
@@ -110,7 +110,7 @@ export function CrmTopbar({
               {alertsOpen && (
                 <>
                   <div className="fixed inset-0 z-10" onClick={() => setAlertsOpen(false)} aria-hidden="true" />
-                  <div className="absolute right-0 top-full mt-2 z-20 w-80 rounded-[20px] bg-white border border-[var(--line)] shadow-[0_24px_48px_-16px_rgba(18,20,16,0.24)] overflow-hidden">
+                  <div className="absolute right-0 top-full mt-2 z-20 w-80 rounded-[20px] bg-[var(--surface-1)] border border-[var(--line)] shadow-[0_24px_48px_-16px_rgba(18,20,16,0.24)] overflow-hidden">
                     <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--line)]">
                       <span className="text-sm font-semibold text-[var(--ink)]">Alerts</span>
                       <button
@@ -188,7 +188,7 @@ export function CrmTopbar({
             onClick={() => setSearchOpen(false)}
             aria-hidden="true"
           />
-          <div className="relative z-10 w-full max-w-xl rounded-[20px] bg-white border border-[var(--line)] shadow-[0_24px_48px_-16px_rgba(18,20,16,0.24)] overflow-hidden">
+          <div className="relative z-10 w-full max-w-xl rounded-[20px] bg-[var(--surface-1)] border border-[var(--line)] shadow-[0_24px_48px_-16px_rgba(18,20,16,0.24)] overflow-hidden">
             <div className="flex items-center gap-3 px-4 py-3 border-b border-[var(--line)]">
               <SearchIcon className="size-5 text-[var(--ink-3)] shrink-0" />
               <input
