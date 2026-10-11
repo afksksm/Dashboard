@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import { PlusIcon, DownloadIcon } from 'lucide-react'
 import { KpiCard } from './kpi-card'
@@ -66,10 +65,10 @@ export function DashboardPage({ profile }: { profile: UserProfile }) {
         </div>
 
         {/* Action buttons */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex w-full flex-wrap items-center gap-2.5 sm:w-auto sm:justify-end">
           <Link
             href="/export"
-            className="flex h-10 items-center gap-2 rounded-full border border-[var(--line)] bg-white px-4 text-xs font-semibold text-[var(--ink)] hover:bg-[var(--surface-2)] transition-colors shadow-xs"
+            className="inline-flex h-10 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-4 text-xs font-semibold text-[var(--ink)] shadow-xs transition-colors hover:bg-[var(--surface-2)]"
           >
             <DownloadIcon className="size-3.5" />
             <span>Export summary</span>
