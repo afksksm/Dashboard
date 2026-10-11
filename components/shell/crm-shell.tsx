@@ -19,7 +19,7 @@ export function CrmShell({
   parentLabel?: string
 }) {
   return (
-    <div className="min-h-dvh bg-[var(--canvas)] relative">
+    <div className="relative min-h-dvh overflow-x-clip bg-[var(--canvas)]">
       {/* Canvas lime wash (top-right subtle lime glow) */}
       <div
         aria-hidden="true"

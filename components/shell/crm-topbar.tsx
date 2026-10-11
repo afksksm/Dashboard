@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
@@ -49,6 +49,15 @@ export function CrmTopbar({
   const pathname = usePathname()
 
   const unreadCount = MOCK_ALERTS.filter((a) => !a.read).length
+
+  useEffect(() => {
+    if (!searchOpen) return
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setSearchOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [searchOpen])
 
   return (
     <div className="sticky top-4 z-20 mx-4 md:mx-6">

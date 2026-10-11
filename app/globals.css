@@ -189,6 +189,21 @@
 
   body {
     @apply min-h-screen bg-background text-foreground;
+    background-image: radial-gradient(circle at 100% 0%, rgba(213, 246, 90, 0.18), transparent 34rem);
+    background-attachment: fixed;
+  }
+
+  button, a, input, select, textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  ::selection {
+    background: var(--lime);
+    color: var(--ink);
   }
 
   :focus-visible {
